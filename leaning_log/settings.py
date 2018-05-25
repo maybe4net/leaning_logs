@@ -133,6 +133,7 @@ BOOTSTRAP3 = {
 }
 
 #Настройки для Heroku
+STATIC_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'staticfiles')
 if os.getcwd() == '/app':
     import dj_database_url
     DATABASES = {dj_database_url.config(default='postgres://localhost')}
